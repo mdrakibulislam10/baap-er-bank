@@ -11,7 +11,8 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     // step-4: verify email and password: DO NOT DO THIS FOR THE CLIENT SITE, its not well way - just practice:
     // i.
     if (email === "sontan@gmail.com" && password === "secret") {
-        console.log("valid user");
+        // location.href = "bank.html";
+        window.location.href = "bank.html";
     }
     // ii.
     /* if (email.includes("@") && email.endsWith(".com") && password) { // password mean if there is any password then, execute the condition
@@ -19,7 +20,12 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     } */
 
     else {
-        console.log("invalid user");
-        // append on the UI in <p>, any tag as an error message
+        // error message
+        /* document.getElementById("error-msg").style.display = "block";
+        return; */
+
+        // error message with alert
+        alert("Invalid User");
     }
+    // document.getElementById("error-msg").style.display = "none";
 });
